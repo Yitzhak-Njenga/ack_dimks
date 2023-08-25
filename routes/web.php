@@ -53,5 +53,5 @@ Route::get('/admin',function (){
     return view('admin.login');
 });
 Route::post('/login',[\App\Http\Controllers\UserController::class,'login']);
-
-
+Route::post('/upload_news',[\App\Http\Controllers\NewsController::class,'index']);
+Route::post('/uploadEvent',[\App\Http\Controllers\EventController::class,'index']);
