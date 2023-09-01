@@ -35,24 +35,25 @@
                             </div>
                         </div>
                         <h6 class="text-uppercase font-weight-bold mb-3">Contact Us</h6>
-                        <form>
+                        <form method="post" action="/contact">
+                            @csrf
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control p-4" placeholder="Your Name" required="required"/>
+                                        <input type="text" name="name" class="form-control p-4" placeholder="Your Name" required="required"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control p-4" placeholder="Your Email" required="required"/>
+                                        <input type="email" name="email" class="form-control p-4" placeholder="Your Email" required="required"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control p-4" placeholder="Subject" required="required"/>
+                                <input type="text" class="form-control p-4" name="number" placeholder="Phone Number +254" required="required"/>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" rows="4" placeholder="Message" required="required"></textarea>
+                                <textarea class="form-control" rows="4" name="message" placeholder="Message" required="required"></textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary font-weight-semi-bold px-4" style="height: 50px;"
@@ -100,7 +101,7 @@
                                     <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
                                 </div>
                             </div>
-                            <small>Lorem ipsum dolor sit amet elit</small>
+                            <small></small>
                         </div>
                     </div>
                     <!-- Newsletter End -->
@@ -109,4 +110,6 @@
         </div>
     </div>
     <!-- Contact End -->
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+
 @endsection

@@ -8,11 +8,13 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="css/style.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-JvExCACAZcHNJEc7156QaHXTnQL3hQBixvj5RV5buE7vgnNEzzskDtx9NQ4p6BJe" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 @yield('content')
+@if(Session::has('user'))
 
 <div class="sidebar">
     <div class="logo-details">
@@ -69,14 +71,17 @@
             <div class="profile-details">
 
                 <div class="name_job">
-                    <div class="name">User</div>
-                    <div class="job">Log out</div>
+                    <div class="name"> Hi, {{Session::get('user')['name']}}</div>
+                    <div class="job"><a href="/logout" >Log out<i class='bx bx-log-out' id="log_out" ></i></a></div>
                 </div>
             </div>
-            <i class='bx bx-log-out' id="log_out" ></i>
+
         </li>
     </ul>
 </div>
+@else
+    <a href="/admin" class="btn-outline-danger">You are not an admin</a>
+@endif
 
 <script>
     let sidebar = document.querySelector(".sidebar");
@@ -102,6 +107,35 @@
         }
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
 @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 </html>

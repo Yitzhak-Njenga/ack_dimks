@@ -77,7 +77,7 @@
                         <a href="#" class="dropdown-item">Menu item 3</a>
                     </div>
                 </div> -->
-                <a href="/news" class="nav-item nav-link">News</a>
+                <a href="/all_news" class="nav-item nav-link">News</a>
                 <a href="/support" class="nav-item nav-link">Support</a>
                 <a href="/events" class="nav-item nav-link">Events</a>
                 <a href="/contact" class="nav-item nav-link">Contact Us</a>
