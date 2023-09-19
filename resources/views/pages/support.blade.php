@@ -54,7 +54,7 @@
                                         </div>
                                 </div>
                             </div>
-                            <div class="bg-dark" style="height: 200px;margin-top: 15%">
+                            <div class="bg-dark" style="height: 220px;margin-top: 15%">
                                 <div class="container" style="margin: 0px" >
                                     <div class="row align-items-start" >
                                         <div class="col">
@@ -63,7 +63,7 @@
                                             <h3 class="text-white">Feel free to reach to us</h3>
                                         </div>
                                         <div class="col">
-                                            <button class="btn btn-primary font-weight-semi-bold px-4" style="height: 50px; width: 180px; border-radius: 30px; margin-top: 15%"
+                                            <button class="btn btn-primary font-weight-semi-bold px-4"  style="height: 50px; width: 180px; border-radius: 30px; margin-top: 15%; margin-bottom: 5px"
                                                     type="submit"><a href="/contact"><p class="text-dark">Contact Us</p></a> </button>
                                         </div>
                                     </div>

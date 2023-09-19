@@ -30,7 +30,7 @@
                             <h6>{{$messages->created_at}}</h6>
                         </div>
                         <div class="col">
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <a href="/delete_message/{{$messages->id}}" class="btn btn-danger">Delete</a>
                         </div>
 
                     </div>

@@ -47,6 +47,7 @@
 <script src="js/main.js"></script>
 
 <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
     window.onscroll = function() {myFunction()};
 
     var navbar = document.getElementById("navbar");

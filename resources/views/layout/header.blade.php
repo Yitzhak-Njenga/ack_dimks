@@ -54,7 +54,7 @@
 <!-- Navbar Start -->
 <div class="container-fluid p-0">
     <nav id="navbar" class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
+        <a href="/" class="navbar-brand d-block d-lg-none">
             <h1 class="m-0 display-4 text-uppercase text-primary">ACK<span
                     class="text-white font-weight-normal">DMKS</span></h1>
         </a>
@@ -66,21 +66,39 @@
             <div class="navbar-nav mr-auto py-0">
 
 
-                <a href="/" class="nav-item nav-link active">Home</a>
-                <a href="/about" class="nav-item nav-link">About Us</a>
+                <a href="/" class="nav-link nav-item {{ '/' ==request()->path() ? 'active' : '' }}">Home</a>
+{{--                <a href="/about" class="nav-item nav-link {{ 'about' ==request()->path()? 'active' : '' }}">About Us</a>--}}
                 <!-- <a href="#" class="nav-item nav-link">Single News</a> -->
-                <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+               <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
                     <div class="dropdown-menu rounded-0 m-0">
-                        <a href="#" class="dropdown-item">Menu item 1</a>
-                        <a href="#" class="dropdown-item">Menu item 2</a>
-                        <a href="#" class="dropdown-item">Menu item 3</a>
+                        <a href="/about" class="dropdown-item  {{ 'about' ==request()->path()? 'active' : '' }}">History</a>
+                        <a href="/mission" class="dropdown-item {{ 'mission' ==request()->path()? 'active' : '' }}">Mission</a>
+                        <a href="/bishops" class="dropdown-item {{ 'bishops' ==request()->path()? 'active' : '' }}">Bishops</a>
                     </div>
-                </div> -->
-                <a href="/all_news" class="nav-item nav-link">News</a>
-                <a href="/support" class="nav-item nav-link">Support</a>
-                <a href="/events" class="nav-item nav-link">Events</a>
-                <a href="/contact" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Department</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="/kama" class="dropdown-item  {{ 'kama' ==request()->path()? 'active' : '' }}">KAMA</a>
+                        <a href="/mothers_union" class="dropdown-item {{ 'mothers_union' ==request()->path()? 'active' : '' }}">Mother's Union</a>
+                        <a href="/choir" class="dropdown-item {{ 'choir' ==request()->path()? 'active' : '' }}">Choir</a>
+                        <a href="/children_teens_youth" class="dropdown-item {{ 'children_teens_youth' ==request()->path()? 'active' : '' }}">Children Teens & Youth</a>
+                        <a href="/dac" class="dropdown-item {{ 'dac' ==request()->path()? 'active' : '' }}">Differently Abled Christians</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="/about" class="dropdown-item  {{ 'about' ==request()->path()? 'active' : '' }}">History</a>
+                        <a href="/mission" class="dropdown-item {{ 'mission' ==request()->path()? 'active' : '' }}">Mission</a>
+                        <a href="/bishops" class="dropdown-item {{ 'bishops' ==request()->path()? 'active' : '' }}">Bishops</a>
+                    </div>
+                </div>
+                <a href="/all_news" class="nav-item nav-link {{ 'all_news' ==request()->path()? 'active' : '' }}">News</a>
+                <a href="/support" class="nav-item nav-link {{ 'support' ==request()->path()? 'active' : '' }}"> Support</a>
+                <a href="/all_Events" class="nav-item nav-link {{ 'all_Events' ==request()->path()? 'active' : '' }}"> Events</a>
+                <a href="/contact" class="nav-item nav-link {{ 'contact' ==request()->path()? 'active' : '' }}">Contact Us</a>
 
             </div>
             <!-- <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">

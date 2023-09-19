@@ -6,6 +6,7 @@ use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
+use Jorenvh\Share\Share;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class NewsController extends Controller
@@ -83,9 +84,21 @@ class NewsController extends Controller
     public function single_news($id){
         $news = News::find($id);
 
-        $data = [
-            'News' => $news
-        ];
+
+        $shareNews = (new \Jorenvh\Share\Share)->currentPage();
+
+        $fb = (new \Jorenvh\Share\Share)->currentPage()->facebook()->getRawLinks();
+        $whatsapp = (new \Jorenvh\Share\Share)->currentPage()->whatsapp()->getRawLinks();
+        $telegram = (new \Jorenvh\Share\Share)->currentPage()->telegram()->getRawLinks();
+        $twitter = (new \Jorenvh\Share\Share)->currentPage()->twitter()->getRawLinks();
+
+            $data = [
+                'News' => $news,
+                'Fb' => $fb,
+                'Whatsapp' => $whatsapp,
+                'Telegram' => $telegram,
+                'Twitter'  => $twitter
+            ];
 
 
 

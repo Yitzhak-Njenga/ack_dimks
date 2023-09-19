@@ -39,7 +39,7 @@
     </div>
 </div>
 <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
-    <p class="m-0 text-center">&copy; <a href="/">ACK DMKS</a>. All Rights Reserved.
+    <p class="m-0 text-center">&copy; <a href="/https://eaglecodes.co.ke/">ACK DMKS</a>All Rights Reserved <span id="year"></span>
 
         Powered by <a href="">Eagle Codes</a>
     </p>

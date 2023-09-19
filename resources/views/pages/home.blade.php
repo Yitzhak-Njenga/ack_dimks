@@ -72,31 +72,7 @@
 <!-- Breaking News End -->
 
 
-<!-- Featured News Slider Start -->
-<div class="container-fluid pt-5 mb-3">
-    <div class="container">
-        <div class="section-title">
-            <h4 class="m-0 text-uppercase font-weight-bold">Featured News</h4>
-        </div>
 
-        <div class="owl-carousel news-carousel carousel-item-4 position-relative">
-            @foreach($News as $news)
-            <div class="position-relative overflow-hidden" style="height: 300px;">
-                <img class="img-fluid h-100" src="NewsImages/{{$news->img_3}}" style="object-fit: cover;">
-                <div class="overlay">
-                    <div class="mb-2">
-
-{{--                        <a class="text-white" href=""><small>May 15 01, 2023</small></a>--}}
-                    </div>
-                    <a class="h6 m-0 text-white" href="">{{$news->title}}</a>
-                </div>
-            </div>
-            @endforeach
-        </div>
-
-    </div>
-</div>
-<!-- Featured News Slider End -->
 
 <!-- About Us -->
 <div class="container-fluid pt-5 mb-3">
@@ -112,7 +88,17 @@
     </div>
 </div>
 <!-- About Us -->
-
+{{--meet bishop--}}
+<div class="container bg-light">
+<div class=" section row justify-content-center m-4">
+    <div class="col-4">
+        <img class="" src="img/The-Rt.-Rev.-Charles-M.-Muturi-web.jpg">
+    </div>
+    <div class="col-4">
+        <button class="btn btn-primary m-5">Meet Bishop</button>
+    </div>
+</div>
+</div>
 
 <!-- News With Sidebar Start -->
 <div class="container-fluid">
@@ -123,7 +109,7 @@
                     <div class="col-12">
                         <div class="section-title">
                             <h4 class="m-0 text-uppercase font-weight-bold">Events</h4>
-                            <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
+                            <a class="text-secondary font-weight-medium text-decoration-none" href="/all_Events">View All</a>
                         </div>
                     </div>
 
@@ -385,6 +371,15 @@
                 </div>
             </div>
 
+            <div class="container">
+                <div class="section-title">
+                    <h4 class="m-0 text-uppercase font-weight-bold">THE ENLIGHTENMENT- MONTH OF OWNING THE CALL TO SHEPHERD GOD'S FLOCK</h4>
+                </div>
+
+                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/OITkhCUKfZI?autoplay=1&mute=1">
+                </iframe>
+            </div>
+
 {{--            <div class="col-lg-4">--}}
 {{--                <!-- Social Follow Start -->--}}
 {{--                <div class="mb-3">--}}
@@ -433,84 +428,170 @@
                 <!-- Social Follow End -->
 
                 <!-- Ads Start -->
-                <div class="mb-3">
-                    <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
-                    </div>
-                    <div class="bg-white text-center border border-top-0 p-3">
+
+{{--            <div class="container">--}}
+{{--                <div class="row align-items-end">--}}
+{{--                    <div class="col">--}}
+{{--                        <div class="section-title mb-0">--}}
+{{--                            <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>--}}
+{{--                            <p>No Advertisement at the moment</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col">--}}
+
+{{--                    </div>--}}
+{{--                    <div class="col">--}}
+{{--                        <div class="bg-white text-center border border-top-0 p-3">--}}
+
+{{--                                <div class="section-title mb-0">--}}
+{{--                                    <h4 class="m-0 text-uppercase font-weight-bold">Tai World Ministry</h4>--}}
+{{--                                </div>--}}
+{{--                                <div class="bg-white border border-top-0 p-3">--}}
+{{--                                    <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                                        --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                                        <iframe class="img-fluid"--}}
+{{--                                                src="https://www.youtube.com/embed/Kz-ljcNHq9A">--}}
+{{--                                        </iframe>--}}
+
+{{--                                    </div>--}}
+{{--                                    <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                                        --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                                        <iframe class="img-fluid"--}}
+{{--                                                src="https://www.youtube.com/embed/jXSMcza09Fk">--}}
+{{--                                        </iframe>--}}
+
+{{--                                    </div>--}}
+{{--                                    <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                                        --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                                        <iframe class="img-fluid"--}}
+{{--                                                src="https://www.youtube.com/embed/Dk3jS8gPc2c">--}}
+{{--                                        </iframe>--}}
+
+{{--                                    </div>--}}
+{{--                                    <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                                        --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                                        <iframe class="img-fluid"--}}
+{{--                                                src="https://www.youtube.com/embed/JS4lMTb7a5E">--}}
+{{--                                        </iframe>--}}
+
+{{--                                    </div>--}}
+{{--                                    <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                                        --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                                        <iframe class="img-fluid"--}}
+{{--                                                src="https://www.youtube.com/embed/JiAYTB7areM">--}}
+{{--                                        </iframe>--}}
+{{--                                        --}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <!-- Popular News End -->--}}
+{{--                            --}}{{--                        <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>--}}
+
+{{--                </div>--}}
+{{--            </div>--}}
+{{--                <div class="col-4">--}}
+{{--                    <div class="section-title mb-0">--}}
+{{--                        <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>--}}
+{{--                    </div>--}}
+{{--                    <div class="bg-white text-center border border-top-0 p-3">--}}
 {{--                        <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>--}}
-                        <p>No Advertisement at the moment</p>
-                    </div>
-                </div>
-                <!-- Ads End -->
+{{--                        <p>No Advertisement at the moment</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <!-- Ads End -->--}}
 
-                <!-- Popular News Start -->
-                <div class="mb-12">
-                    <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Tai World Ministry</h4>
-                    </div>
-                    <div class="bg-white border border-top-0 p-3">
-                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >
+{{--                <!-- Popular News Start -->--}}
+{{--                <div class="mb-12">--}}
+{{--                    <div class="section-title mb-0">--}}
+{{--                        <h4 class="m-0 text-uppercase font-weight-bold">Tai World Ministry</h4>--}}
+{{--                    </div>--}}
+{{--                    <div class="bg-white border border-top-0 p-3">--}}
+{{--                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
 {{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
-                            <iframe class="img-fluid"
-                                    src="https://www.youtube.com/embed/Kz-ljcNHq9A">
-                            </iframe>
+{{--                            <iframe class="img-fluid"--}}
+{{--                                    src="https://www.youtube.com/embed/Kz-ljcNHq9A">--}}
+{{--                            </iframe>--}}
 
-                        </div>
-                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >
-                            {{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
-                            <iframe class="img-fluid"
-                                    src="https://www.youtube.com/embed/jXSMcza09Fk">
-                            </iframe>
+{{--                        </div>--}}
+{{--                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                            --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                            <iframe class="img-fluid"--}}
+{{--                                    src="https://www.youtube.com/embed/jXSMcza09Fk">--}}
+{{--                            </iframe>--}}
 
-                        </div>
-                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >
-                            {{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
-                            <iframe class="img-fluid"
-                                    src="https://www.youtube.com/embed/Dk3jS8gPc2c">
-                            </iframe>
+{{--                        </div>--}}
+{{--                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                            --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                            <iframe class="img-fluid"--}}
+{{--                                    src="https://www.youtube.com/embed/Dk3jS8gPc2c">--}}
+{{--                            </iframe>--}}
 
-                        </div>
-                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >
-                            {{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
-                            <iframe class="img-fluid"
-                                    src="https://www.youtube.com/embed/JS4lMTb7a5E">
-                            </iframe>
+{{--                        </div>--}}
+{{--                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                            --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                            <iframe class="img-fluid"--}}
+{{--                                    src="https://www.youtube.com/embed/JS4lMTb7a5E">--}}
+{{--                            </iframe>--}}
 
-                        </div>
-                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >
-                            {{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
-                            <iframe class="img-fluid"
-                                    src="https://www.youtube.com/embed/JiAYTB7areM">
-                            </iframe>
+{{--                        </div>--}}
+{{--                        <div class="d-flex align-items-center bg-white mb-3" style=" padding: 5px" >--}}
+{{--                            --}}{{--                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">--}}
+{{--                            <iframe class="img-fluid"--}}
+{{--                                    src="https://www.youtube.com/embed/JiAYTB7areM">--}}
+{{--                            </iframe>--}}
 
-                        </div>
-                    </div>
-                </div>
-                <!-- Popular News End -->
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <!-- Popular News End -->--}}
 
-                <!-- Newsletter Start -->
+{{--            <!-- Featured News Slider Start -->--}}
+{{--            <div class="container-fluid pt-5 mb-3">--}}
+{{--                <div class="container">--}}
+{{--                    <div class="section-title">--}}
+{{--                        <h4 class="m-0 text-uppercase font-weight-bold">Featured News</h4>--}}
+{{--                    </div>--}}
 
-                <!-- Newsletter End -->
+{{--                    <div class="owl-carousel news-carousel carousel-item-4 position-relative">--}}
+{{--                        @foreach($News as $news)--}}
+{{--                            <div class="position-relative overflow-hidden" style="height: 300px;">--}}
+{{--                                <img class="img-fluid h-100" src="NewsImages/{{$news->img_3}}" style="object-fit: cover;">--}}
+{{--                                <div class="overlay">--}}
+{{--                                    <div class="mb-2">--}}
 
-                <!-- Tags Start -->
-            <div class="mb-3">
-                <div class="section-title mb-6">
-                    <h4 class="m-0 text-uppercase font-weight-bold">Newsletter</h4>
-                </div>
-                <div class="bg-white text-center border border-top-0 p-3">
-                    <p>Subscribe to Our News Letter</p>
-                    <div class="input-group mb-2" style="width: 100%;">
-                        <input type="text" class="form-control form-control-lg" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <!-- Tags End -->
-            </div>
-        </div>
+{{--                                        --}}{{--                        <a class="text-white" href=""><small>May 15 01, 2023</small></a>--}}
+{{--                                    </div>--}}
+{{--                                    <a class="h6 m-0 text-white" href="">{{$news->title}}</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
+{{--                    </div>--}}
+
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <!-- Featured News Slider End -->--}}
+
+{{--                <!-- Newsletter Start -->--}}
+
+{{--                <!-- Newsletter End -->--}}
+
+{{--                <!-- Tags Start -->--}}
+{{--            <div class="mb-3">--}}
+{{--                <div class="section-title mb-6">--}}
+{{--                    <h4 class="m-0 text-uppercase font-weight-bold">Newsletter</h4>--}}
+{{--                </div>--}}
+{{--                <div class="bg-white text-center border border-top-0 p-3">--}}
+{{--                    <p>Subscribe to Our News Letter</p>--}}
+{{--                    <div class="input-group mb-2" style="width: 100%;">--}}
+{{--                        <input type="text" class="form-control form-control-lg" placeholder="Your Email">--}}
+{{--                        <div class="input-group-append">--}}
+{{--                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--                <!-- Tags End -->--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
 </div>
 <!-- News With Sidebar End -->

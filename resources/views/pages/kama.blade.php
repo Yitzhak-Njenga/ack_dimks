@@ -6,9 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div id="header"  class="section-title mb-0">
-                        <h4 class="m-0 text-white  font-weight-bold">About US</h4>
-
-
+                        <h4 class="m-0 text-black-0  font-weight-bold">KAMA</h4>
                     </div>
                     <div class="bg-white border border-top-0 p-4 mb-3">
                         <div class="mb-4">
@@ -25,43 +23,43 @@
                             </div>
                             <p class="mb-4 p-2">
                                 This Diocese was formed out of the subdivision of the Diocese of Mount Kenya in 1975, with its headquarters in Kiambu. The Rt. Rev. Obadiah Kariuki was its first Bishop. He retired in 1976 and was succeeded by the Rt. Rev. Sospeter Magua, who was consecrated on 31 October 1976. The Rt. Rev. Eshbon Ngaruiya moved with Bishop Kariuki to remain his Assistant Bishop and continued to serve in this capacity under Bishop Magua.
-                                                    <br>
-                                                    <br>
+                                <br>
+                                <br>
                                 After the tragic death of Bishop and Mrs. Magua in a road accident the same year, the Rt. Rev. George Njuguna became Bishop until 1996. He was succeeded by the Rt. Rev. Peter Njenga who served until his retirement in 2004. The Rt. Rev. Timothy Ranji took over,  assisted by The Rt. Rev. Charles Mugane Muturi as the Assistant Bishop. In 1998, the Diocese was subdivided to create the diocese of Thika.
 
                                 The duo was consecrated and enthroned on 18th July 2004 and 31st October 2010 respectively. Bishop Ranji retired in 2019, leaving the reigns to Bishop Muturi who was enthroned on the 20th of December 2019
-                                                        <br>
-                                                        <br>
+                                <br>
+                                <br>
                                 This densely populated Diocese started with nearly two million, people, of whom about 203,000 were Anglicans. There were initially 64 clergy, 50 parishes and 300 congregations, 97 paid evangelists, and 181 lay readers. The expansion has continued, but within a smaller area since Mount Kenya Central, Diocese was formed in 1984. The diocese has 13 Archdeaconries.</p>
-{{--                            <div class="mb-3">--}}
+                            {{--                            <div class="mb-3">--}}
 
 
-{{--                                    <div class="form-row">--}}
-{{--                                        <div class="col-lg">--}}
+                            {{--                                    <div class="form-row">--}}
+                            {{--                                        <div class="col-lg">--}}
 
-{{--                                            <h6 class="text-uppercase font-weight-bold mb-3">Vision</h6>--}}
-{{--                                            A strong, dynamic, resourceful, self-sustaining diocese that is grounded and boldly proclaiming Jesus Christ through the word of God--}}
+                            {{--                                            <h6 class="text-uppercase font-weight-bold mb-3">Vision</h6>--}}
+                            {{--                                            A strong, dynamic, resourceful, self-sustaining diocese that is grounded and boldly proclaiming Jesus Christ through the word of God--}}
 
-{{--                                        </div>--}}
-{{--                                        <div class="col-lg">--}}
-{{--                                            <h6 class="text-uppercase font-weight-bold mb-3">Core Values</h6>--}}
-{{--                                            Integrity and transparency<br>--}}
-{{--                                            Hard work and professionalism<br>--}}
-{{--                                            Love and compassion<br>--}}
-{{--                                            Teamwork and Unity<br>--}}
-{{--                                            Holiness and sound doctrine<br>--}}
-{{--                                            Humility and respect<br>--}}
-{{--                                            Discipline and commitment<br>--}}
-{{--                                            Accountability and diligence<br>--}}
-{{--                                            Stewardship<br>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
+                            {{--                                        </div>--}}
+                            {{--                                        <div class="col-lg">--}}
+                            {{--                                            <h6 class="text-uppercase font-weight-bold mb-3">Core Values</h6>--}}
+                            {{--                                            Integrity and transparency<br>--}}
+                            {{--                                            Hard work and professionalism<br>--}}
+                            {{--                                            Love and compassion<br>--}}
+                            {{--                                            Teamwork and Unity<br>--}}
+                            {{--                                            Holiness and sound doctrine<br>--}}
+                            {{--                                            Humility and respect<br>--}}
+                            {{--                                            Discipline and commitment<br>--}}
+                            {{--                                            Accountability and diligence<br>--}}
+                            {{--                                            Stewardship<br>--}}
+                            {{--                                        </div>--}}
+                            {{--                                    </div>--}}
 
-{{--                                    <h6 class="text-uppercase font-weight-bold mb-3">Mission</h6>--}}
-{{--                                    To develop a Diocese that is committed to the work of God and empowers the community to grow holistically using the available resources.--}}
+                            {{--                                    <h6 class="text-uppercase font-weight-bold mb-3">Mission</h6>--}}
+                            {{--                                    To develop a Diocese that is committed to the work of God and empowers the community to grow holistically using the available resources.--}}
 
 
-{{--                        </div>--}}
+                            {{--                        </div>--}}
 
                         </div>
                         {{--                <div class="col-lg-4">--}}

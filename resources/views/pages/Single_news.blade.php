@@ -41,6 +41,15 @@
 
                         <p>{{$News->description}}</p>
 
+                        <div class="container m-5">
+                            
+                                 <a href="{{$Fb}}"><img class="img-fluid" src="img/icons8-facebook-48.png"></a>
+                                 <a href="{{$Twitter}}"><img class="img-fluid" src="img/icons8-twitter-50.png"></a>
+                                 <a href="{{$Telegram}}"><img class="img-fluid" src="img/icons8-telegram-48.png"></a>
+                                 <a href="{{$Whatsapp}}"><img class="img-fluid" src="img/icons8-whatsapp-48.png"></a>
+
+                        </div>
+
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">

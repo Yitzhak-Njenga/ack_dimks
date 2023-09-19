@@ -35,14 +35,47 @@ Route::get('/all_news',function (){
     ];
     return view('pages.all_news',$data);
 });
+Route::get('all_Events',function (){
+    $events = \App\Models\Event::paginate(3);
+
+    $data = [
+        'event' => $events
+    ];
+    return view('pages.Events',$data);
+});
 Route::get('/events',function (){
     return view('pages.Events');
 });
 Route::get('/support',function (){
     return view('pages.support');
 });
+Route::get('mission',function(){
+    return view('pages.mission');
+});
+Route::get('/bishops',function (){
+    return view('pages.bishops');
+});
 Route::get('/about',function (){
     return view('pages.about');
+});
+Route::get('/kama',function (){
+   return view('pages.kama');
+});
+
+Route::get('/kama',function (){
+   return view('pages.kama');
+});
+Route::get('/mothers_union',function (){
+   return view('pages.mothers_union');
+});
+Route::get('/choir',function (){
+   return view('pages.choir');
+});
+Route::get('/dac',function (){
+   return view('pages.dac');
+});
+Route::get('/children_teens_youth',function (){
+   return view('pages.children_teens_youth');
 });
 Route::get('/dashboard',function (){
 
@@ -105,5 +138,6 @@ Route::get('/logout',function (){
 });
 Route::post('bulk_sms',[\App\Http\Controllers\BulkSmsController::class,'index']);
 Route::post('/contact',[\App\Http\Controllers\ContactsController::class,'index']);
+Route::get('/delete_message/{id}',[\App\Http\Controllers\ContactsController::class,'delete']);
 Route::get('/{id}',[\App\Http\Controllers\NewsController::class,'single_news']);
 
