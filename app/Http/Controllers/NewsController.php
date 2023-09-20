@@ -83,6 +83,10 @@ class NewsController extends Controller
 
     public function single_news($id){
         $news = News::find($id);
+        $News = \App\Models\News::inRandomOrder()->take(5)->get();
+
+
+
 
 
         $shareNews = (new \Jorenvh\Share\Share)->currentPage();
@@ -97,7 +101,8 @@ class NewsController extends Controller
                 'Fb' => $fb,
                 'Whatsapp' => $whatsapp,
                 'Telegram' => $telegram,
-                'Twitter'  => $twitter
+                'Twitter'  => $twitter,
+                'read_also' => $News
             ];
 
 
