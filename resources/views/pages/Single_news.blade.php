@@ -1,6 +1,104 @@
 @extends('layout.main')
 @section('content')
-<!-- Breaking News Start -->
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #ffcc00;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    </style>
+    <!-- Breaking News Start -->
 <div style="" class="container-fluid mt-5 mb-3 pt-3">
     <div class="container">
         <div class="row align-items-center">
@@ -32,18 +130,71 @@
                     <img class="img-fluid w-100" style="object-fit: cover;">
                     <div class="bg-white border border-top-0 p-4">
                         <div class="mb-3">
-                            <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                               href="">Business</a>
-                            <a class="text-body" href="">Jan 01, 2045</a>
+{{--                            <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"--}}
+{{--                               href="">Business</a>--}}
+{{--                            <a class="text-body" href="">Jan 01, 2045</a>--}}
                         </div>
-                        <h1 class="mb-3 text-secondary text-uppercase font-weight-bold">{{$News->title}}</h1>
-                        <img class="img-fluid w-50 float-right mr-4 mb-2" src="NewsImages/{{$News->img_2}}">
+                        <div class="container m-0">
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 5</div>
+                                <img src="NewsImages/{{$News->img_1}}" style="width:100%">
+                            </div>
 
-                        <p>{{$News->description}}</p>
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 5</div>
+                                <img src="NewsImages/{{$News->img_2}}" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 5</div>
+                                <img src="NewsImages/{{$News->img_3}}" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 5</div>
+                                <img src="NewsImages/{{$News->img_4}}" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">5 / 5</div>
+                                <img src="NewsImages/{{$News->img_4}}" style="width:100%">
+                            </div>
+
+
+
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+
+                            <div class="caption-container">
+                                <h2>{{$News->title}}</h2>
+                            </div>
+
+                            <div class="row">
+                                <div class="column">
+                                    <img class="demo cursor" src="NewsImages/{{$News->img_1}}" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="NewsImages/{{$News->img_2}}" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="NewsImages/{{$News->img_3}}" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="NewsImages/{{$News->img_4}}" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="NewsImages/{{$News->img_5}}" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                                </div>
+
+                            </div>
+                        </div>
+{{--                        <img class="img-fluid w-50 float-right mr-4 mb-2" src="NewsImages/{{$News->img_2}}">--}}
+
+                        <h6>{{$News->description}}</h6>
 
                         <div class="container m-5">
-                            
-                                 <a href="{{$Fb}}"><img class="img-fluid" src="img/icons8-facebook-48.png"></a>
+
+                                 <a href="{{$Fb}}"><img target="_blank" class="img-fluid" src="img/icons8-facebook-48.png"></a>
                                  <a href="{{$Twitter}}"><img class="img-fluid" src="img/icons8-twitter-50.png"></a>
                                  <a href="{{$Telegram}}"><img class="img-fluid" src="img/icons8-telegram-48.png"></a>
                                  <a href="{{$Whatsapp}}"><img class="img-fluid" src="img/icons8-whatsapp-48.png"></a>
@@ -252,8 +403,8 @@
                         <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                     </div>
                     <div class="bg-white text-center border border-top-0 p-3">
-                        <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>
-                    </div>
+                        <p>No advert at the momment</p>
+                  </div>
                 </div>
                 <!-- Ads End -->
 
@@ -362,4 +513,8 @@
 </div>
 <!-- News With Sidebar End -->
 
+
 @endsection
+
+
+

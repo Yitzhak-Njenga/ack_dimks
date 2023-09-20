@@ -8,7 +8,7 @@
                 @foreach($News as $news)
                 <div class="position-relative overflow-hidden" style="height: 500px;">
 
-                    <img class="img-fluid h-100" src="NewsImages/{{$news->img_1}}" style="object-fit: cover;">
+                    <img class="img-fluid h-100" src="NewsImages/{{$news->img_1}}" style="object-fit: cover; height:400px" >
                     <div class="overlay">
                         <div class="mb-2">
 {{--                            <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"--}}
@@ -27,7 +27,7 @@
                 <div class="col-md-6 px-0">
 
                     <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-100"src="NewsImages/{{$news->img_2}}" style="object-fit: cover;">
+                        <img class="img-fluid w-100 h-00"src="NewsImages/{{$news->img_2}}" style="object-fit: cover;">
                         <div class="overlay">
                             <div class="mb-2">
                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
