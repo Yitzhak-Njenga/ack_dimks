@@ -56,10 +56,10 @@
             @csrf
             <input type="file" required class="form-group" name="file">
             <div class="row">
-                <input required class="col-8" type="text" name="message" placeholder="type your message here......">
+                <textarea class="form-control m-5" rows="4" cols="7" name="message" placeholder="type your message here......" required="required"></textarea>
+
             </div>
-            <br>
-            <button class="btn btn-danger col-12" type="submit">Send</button>
+            <button class="btn btn-danger col-4" type="submit">Send</button>
             @else
                 <a href="/admin" class="btn-outline-danger">You are not an admin</a>
             @endif

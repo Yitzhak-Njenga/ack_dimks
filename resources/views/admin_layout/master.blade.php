@@ -60,6 +60,13 @@
             <span class="tooltip">Messages</span>
         </li>
         <li>
+            <a href="/adverts">
+                <i class='bx bx-briefcase' ></i>
+                <span class="links_name">Messages</span>
+            </a>
+            <span class="tooltip">Messages</span>
+        </li>
+        <li>
             <a href="events">
                 <i class='bx bx-home-smile' ></i>
                 <span class="links_name">Events</span>

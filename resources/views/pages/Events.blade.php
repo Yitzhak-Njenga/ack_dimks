@@ -1,10 +1,13 @@
 @extends('layout.main')
 @section('content')
+    <div class="container" style="margin-top: 10px">
+        <div class="col-12">
+            <div class="section-title">
+                <h4 class="m-0 text-uppercase font-weight-bold">Events</h4>
+            </div>
+        </div>
+    </div>
 
-    <!-- Breaking News End -->
-
-
-    <!-- News With Sidebar Start -->
     <div class="container-fluid">
         <div class="container">
             <div class="row">
@@ -43,44 +46,6 @@
                     </style>
 
 
-                    <!-- Comment Form Start -->
-                    <div class="mb-3">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Leave a comment</h4>
-                        </div>
-                        <div class="bg-white border border-top-0 p-4">
-                            <form>
-                                <div class="form-row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="name">Name *</label>
-                                            <input type="text" class="form-control" id="name">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="email">Email *</label>
-                                            <input type="email" class="form-control" id="email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="website">Website</label>
-                                    <input type="url" class="form-control" id="website">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="message">Message *</label>
-                                    <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
-                                </div>
-                                <div class="form-group mb-0">
-                                    <input type="submit" value="Leave a comment"
-                                           class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- Comment Form End -->
                 </div>
 
                 <div class="col-lg-4">

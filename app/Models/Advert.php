@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Advert extends Model
 {
     use HasFactory;
+    public $table = 'adverts';
+    protected $fillable = ['title','link','poster'];
 }

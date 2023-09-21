@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Advert;
+use App\Models\Event;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdvertController extends Controller
 {
@@ -12,9 +14,20 @@ class AdvertController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+
+        if ($request->hasFile('poster')) {
+            $file = $request->file('poster');
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('Adverts'), $fileName);// Store in 'storage/app/uploads' directory
+
+            Advert::create(['title' => $request->title, 'link' => $request->link, 'poster' => $fileName]);
+
+            Alert::success('Success', ' Event Uploaded Successful');
+
+            return redirect()->back();
+        }
     }
 
     /**

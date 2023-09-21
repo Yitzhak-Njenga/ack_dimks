@@ -16,10 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    Session::forget('user');
     $News = \App\Models\News::inRandomOrder()->take(4)->get();
+    $featured_news = \App\Models\News::inRandomOrder()->take(5)->get();
+    $events = \App\Models\Event::all()->take(4);
+
 
     $data =[
-        'News' => $News
+        'News' => $News,
+        'events' => $events,
+        'featured_news' => $featured_news
     ];
 
     return view('pages.home',$data);
@@ -104,7 +110,7 @@ Route::get('/messages',function (){
 });
 Route::get('/upload_news',function (){
 
-    $all_news = \App\Models\News::all();
+    $all_news = \App\Models\News::orderby('id','desc')->get();
 
     $data = [
         'new' => $all_news
@@ -136,6 +142,19 @@ Route::get('/logout',function (){
     toast('Logged out Successful','success');
     return redirect('/admin');
 });
+Route::get('/meet_bishop',function (){
+    return view('pages.meet_bishop');
+});
+Route::get('/adverts',function (){
+    $adverts = \App\Models\Advert::all();
+
+    $data = [
+        'adverts'=>$adverts
+    ];
+
+    return view('admin.adverts',$data);
+});
+Route::post('upload_advert',[\App\Http\Controllers\AdvertController::class,'index']);
 Route::post('bulk_sms',[\App\Http\Controllers\BulkSmsController::class,'index']);
 Route::post('/contact',[\App\Http\Controllers\ContactsController::class,'index']);
 Route::get('/delete_message/{id}',[\App\Http\Controllers\ContactsController::class,'delete']);

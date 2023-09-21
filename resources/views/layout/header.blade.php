@@ -62,8 +62,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
-            <img width="80px"  height="100px" src="./img/logo.png">
+            <a href="/"><img width="80px"  height="100px" src="./img/logo.png"></a>
             <div class="navbar-nav mr-auto py-0">
+                <a href="/"><h6  class="m-1 text-white link-dark">ACK DIOCESE OF<br> MT KENYA SOUTH</h6></a>
 
 
                 <a href="/" class="nav-link nav-item {{ '/' ==request()->path() ? 'active' : '' }}">Home</a>
