@@ -364,47 +364,51 @@
 
             <div class="col-lg-4">
                 <!-- Social Follow Start -->
+                <!-- Social Follow Start -->
                 <div class="mb-3">
                     <div class="section-title mb-0">
                         <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
                     </div>
                     <div class="bg-white border border-top-0 p-3">
-                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
+                        <a href="https://web.facebook.com/ackdmks" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
                             <i class="fab fa-facebook-f text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Fans</span>
+                            <span class="font-weight-medium">15,000 Followers</span>
                         </a>
-                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
+                        <a href=https://twitter.com/MtkenyaSDiocese"" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
                             <i class="fab fa-twitter text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Followers</span>
+                            <span class="font-weight-medium">13,345 Followers</span>
                         </a>
-                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
-                            <i class="fab fa-linkedin-in text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Connects</span>
+                        <a href="https://www.instagram.com/tai_world_wide_ministry/" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
+                            <i class="fab fa-instagram text-center py-4 mr-3" style="width: 65px; background: rgb(255,0,166);"></i>
+                            <span class="font-weight-medium">111 Followers</span>
                         </a>
-                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
-                            <i class="fab fa-instagram text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Followers</span>
-                        </a>
-                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
-                            <i class="fab fa-youtube text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Subscribers</span>
-                        </a>
-                        <a href="" class="d-block w-100 text-white text-decoration-none" style="background: #055570;">
-                            <i class="fab fa-vimeo-v text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Followers</span>
+                        <a href="https://www.youtube.com/@taiworldwideministry" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
+                            <i class="fab fa-youtube text-center py-4 mr-3" style="width: 65px; background: rgba(255,5,5,0.92);"></i>
+                            <span class="font-weight-medium">3,800 Followers</span>
                         </a>
                     </div>
-                </div>
-                <!-- Social Follow End -->
+                    <!-- Social Follow End -->
 
+
+                </div>
+
+                <!-- Social Follow End -->
+                <!-- Social Follow End -->
                 <!-- Ads Start -->
                 <div class="mb-3">
                     <div class="section-title mb-0">
                         <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                     </div>
                     <div class="bg-white text-center border border-top-0 p-3">
-                        <p>No advert at the momment</p>
-                  </div>
+                        @if($adverts->isNotEmpty())
+                            @foreach($adverts as $advert)
+                                <a href="{{$advert->link}}"><img class="img-fluid" src="Adverts/{{$advert->poster}}" alt=""></a>
+                                <h6><a href="{{$advert->link}}" >{{$advert->title}}</a></h6>
+                            @endforeach
+                        @else
+                            No adverts at the moment
+                        @endif
+                    </div>
                 </div>
                 <!-- Ads End -->
 

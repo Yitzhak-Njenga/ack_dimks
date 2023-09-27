@@ -20,32 +20,47 @@ Route::get('/', function () {
     $News = \App\Models\News::inRandomOrder()->take(4)->get();
     $featured_news = \App\Models\News::inRandomOrder()->take(5)->get();
     $events = \App\Models\Event::all()->take(4);
+    $advert = \App\Models\Advert::inRandomOrder()->take(1)->get();
+
+
 
 
     $data =[
         'News' => $News,
         'events' => $events,
-        'featured_news' => $featured_news
+        'featured_news' => $featured_news,
+        'adverts' => $advert
     ];
 
     return view('pages.home',$data);
 });
 Route::get('/contact',function (){
-    return view('pages.contact');
+    $advert = \App\Models\Advert::inRandomOrder()->take(1)->get();
+    $data =[
+        'adverts' => $advert
+        ];
+    return view('pages.contact',$data);
 });
 Route::get('/all_news',function (){
-    $news = \App\Models\News::paginate(3);
+    $news = \App\Models\News::paginate(5);
+    $advert = \App\Models\Advert::inRandomOrder()->take(1)->get();
+
 
     $data = [
+        'adverts' => $advert,
         'News' => $news
     ];
     return view('pages.all_news',$data);
 });
 Route::get('all_Events',function (){
     $events = \App\Models\Event::paginate(3);
+    $advert = \App\Models\Advert::inRandomOrder()->take(1)->get();
+
+
 
     $data = [
-        'event' => $events
+        'event' => $events,
+        'adverts' => $advert,
     ];
     return view('pages.Events',$data);
 });
@@ -146,7 +161,7 @@ Route::get('/meet_bishop',function (){
     return view('pages.meet_bishop');
 });
 Route::get('/adverts',function (){
-    $adverts = \App\Models\Advert::all();
+    $adverts = \App\Models\Advert::orderby('id','desc')->get();
 
     $data = [
         'adverts'=>$adverts
@@ -154,7 +169,11 @@ Route::get('/adverts',function (){
 
     return view('admin.adverts',$data);
 });
+Route::post('/subcribers',[\App\Http\Controllers\SubscribersController::class,'index']);
+Route::get('/churches',[\App\Http\Controllers\ChurchesController::class,'index']);
+Route::post('dmks/churches',[\App\Http\Controllers\ChurchesController::class,'add_church']);
 Route::post('upload_advert',[\App\Http\Controllers\AdvertController::class,'index']);
+Route::post('delete_advert',[\App\Http\Controllers\AdvertController::class,'delete']);
 Route::post('bulk_sms',[\App\Http\Controllers\BulkSmsController::class,'index']);
 Route::post('/contact',[\App\Http\Controllers\ContactsController::class,'index']);
 Route::get('/delete_message/{id}',[\App\Http\Controllers\ContactsController::class,'delete']);

@@ -95,14 +95,17 @@ class NewsController extends Controller
         $whatsapp = (new \Jorenvh\Share\Share)->currentPage()->whatsapp()->getRawLinks();
         $telegram = (new \Jorenvh\Share\Share)->currentPage()->telegram()->getRawLinks();
         $twitter = (new \Jorenvh\Share\Share)->currentPage()->twitter()->getRawLinks();
+        $advert = \App\Models\Advert::inRandomOrder()->take(1)->get();
 
-            $data = [
+
+        $data = [
                 'News' => $news,
                 'Fb' => $fb,
                 'Whatsapp' => $whatsapp,
                 'Telegram' => $telegram,
                 'Twitter'  => $twitter,
-                'read_also' => $News
+                'read_also' => $News,
+                'adverts' => $advert,
             ];
 
 

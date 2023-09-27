@@ -1,4 +1,5 @@
 <!-- Topbar Start -->
+
 <div class="container-fluid d-none d-lg-block">
     <div class="row align-items-center bg-dark px-lg-5">
         <div class="col-lg-9">
@@ -81,34 +82,29 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Department</a>
                     <div class="dropdown-menu rounded-0 m-0">
-                        <a href="/kama" class="dropdown-item  {{ 'kama' ==request()->path()? 'active' : '' }}">KAMA</a>
-                        <a href="/mothers_union" class="dropdown-item {{ 'mothers_union' ==request()->path()? 'active' : '' }}">Mother's Union</a>
-                        <a href="/choir" class="dropdown-item {{ 'choir' ==request()->path()? 'active' : '' }}">Choir</a>
-                        <a href="/children_teens_youth" class="dropdown-item {{ 'children_teens_youth' ==request()->path()? 'active' : '' }}">Children Teens & Youth</a>
-                        <a href="/dac" class="dropdown-item {{ 'dac' ==request()->path()? 'active' : '' }}">Differently Abled Christians</a>
+                        <a href="/" class="dropdown-item  {{ 'kama' ==request()->path()? 'active' : '' }}">KAMA</a>
+                        <a href="/" class="dropdown-item {{ 'mothers_union' ==request()->path()? 'active' : '' }}">Mother's Union</a>
+                        <a href="/" class="dropdown-item {{ 'choir' ==request()->path()? 'active' : '' }}">Choir</a>
+                        <a href="/" class="dropdown-item {{ 'children_teens_youth' ==request()->path()? 'active' : '' }}">Children Teens & Youth</a>
+                        <a href="/" class="dropdown-item {{ 'dac' ==request()->path()? 'active' : '' }}">Differently Abled Christians</a>
                     </div>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Boards</a>
                     <div class="dropdown-menu rounded-0 m-0">
-                        <a href="/about" class="dropdown-item  {{ 'about' ==request()->path()? 'active' : '' }}">History</a>
-                        <a href="/mission" class="dropdown-item {{ 'mission' ==request()->path()? 'active' : '' }}">Mission</a>
-                        <a href="/bishops" class="dropdown-item {{ 'bishops' ==request()->path()? 'active' : '' }}">Bishops</a>
+                        <a href="/" class="dropdown-item  {{ 'about' ==request()->path()? 'active' : '' }}">Board Of Finance</a>
+                        <a href="/" class="dropdown-item {{ 'mission' ==request()->path()? 'active' : '' }}">Board Of Communication</a>
+                        <a href="/" class="dropdown-item {{ 'bishops' ==request()->path()? 'active' : '' }}">Board Of Missions</a>
                     </div>
                 </div>
                 <a href="/all_news" class="nav-item nav-link {{ 'all_news' ==request()->path()? 'active' : '' }}">News</a>
+                <a href="/churches" class="nav-item nav-link {{ 'all_news' ==request()->path()? 'active' : '' }}">Churches</a>
                 <a href="/support" class="nav-item nav-link {{ 'support' ==request()->path()? 'active' : '' }}"> Support</a>
                 <a href="/all_Events" class="nav-item nav-link {{ 'all_Events' ==request()->path()? 'active' : '' }}"> Events</a>
                 <a href="/contact" class="nav-item nav-link {{ 'contact' ==request()->path()? 'active' : '' }}">Contact Us</a>
 
             </div>
-            <!-- <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
-                <input type="text" class="form-control border-0" placeholder="Keyword">
-                <div class="input-group-append">
-                    <button class="input-group-text bg-primary text-dark border-0 px-3"><i
-                            class="fa fa-search"></i></button>
-                </div>
-            </div> -->
+
         </div>
     </nav>
 </div>

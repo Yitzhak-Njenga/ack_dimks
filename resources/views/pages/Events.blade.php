@@ -63,21 +63,21 @@
                                 <i class="fab fa-twitter text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
                                 <span class="font-weight-medium">13,345 Followers</span>
                             </a>
-                            <a href="https://www.instagram.com/tai_world_wide_ministry/" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
+                            <a href="https://www.instagram.com/tai_world_wide_ministry/" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
                                 <i class="fab fa-instagram text-center py-4 mr-3" style="width: 65px; background: rgb(255,0,166);"></i>
                                 <span class="font-weight-medium">111 Followers</span>
                             </a>
-                            <a href="https://www.youtube.com/@taiworldwideministry" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
+                            <a href="https://www.youtube.com/@taiworldwideministry" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
                                 <i class="fab fa-youtube text-center py-4 mr-3" style="width: 65px; background: rgba(255,5,5,0.92);"></i>
-                                <span class="font-weight-medium">111 Followers</span>
+                                <span class="font-weight-medium">3,800 Followers</span>
                             </a>
                         </div>
+                        <!-- Social Follow End -
+
+
+                        </div>
+
                         <!-- Social Follow End -->
-
-
-                    </div>
-
-                    <!-- Social Follow End -->
 
                     <!-- Ads Start -->
                     <div class="mb-3">
@@ -85,8 +85,14 @@
                             <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                         </div>
                         <div class="bg-white text-center border border-top-0 p-3">
-{{--                            <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>--}}
-                            No adverts at the moment
+                            @if($adverts->isNotEmpty())
+                                @foreach($adverts as $advert)
+                                    <a href="{{$advert->link}}"><img class="img-fluid" src="Adverts/{{$advert->poster}}" alt=""></a>
+                                    <h6><a href="{{$advert->link}}" >{{$advert->title}}</a></h6>
+                                @endforeach
+                            @else
+                                No adverts at the moment
+                            @endif
                         </div>
                     </div>
                     <!-- Ads End -->
@@ -157,16 +163,22 @@
                             <h4 class="m-0 text-uppercase font-weight-bold">Newsletter</h4>
                         </div>
                         <div class="bg-white text-center border border-top-0 p-3">
-{{--                            <p>Aliqu justo et labore at eirmod justo sea erat diam dolor diam vero kasd</p>--}}
-                            <div class="input-group mb-2" style="width: 100%;">
-                                <input type="text" class="form-control form-control-lg" placeholder="Your Email">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                            <div class="input-group" style="width: 100%;">
+                                <div class="row">
+                                    <form method="post" class="col-12"  enctype="multipart/form-data" action="/subcribers">
+                                        @csrf
+                                        <input type="email" required name="email" class="form-control col-12" placeholder="Your Email">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="m-3 btn btn-primary font-weight-bold px-3">Sign Up</button>
+                                        </div>
+                                        <small>Subscribe to our News Letter</small>
+                                    </form>
                                 </div>
                             </div>
-                            <small>Lorem ipsum dolor sit amet elit</small>
+
                         </div>
                     </div>
+
                     <!-- Newsletter End -->
 
                     <!-- Tags Start -->

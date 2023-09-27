@@ -3,13 +3,17 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>admin</title>
+    <title>ACK DMKS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ANGLICAN CHURCH OF KENYA" name="keywords">
+    <meta content="Diocese Of Mount Kenya South" name="description">
     <link rel="stylesheet" href="css/admin.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-JvExCACAZcHNJEc7156QaHXTnQL3hQBixvj5RV5buE7vgnNEzzskDtx9NQ4p6BJe" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -113,7 +117,9 @@
             closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
         }
     }
+
 </script>
+<script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
@@ -144,6 +150,6 @@
 </script>
 
 
-@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+@include('sweetalert::alert')
 </body>
 </html>

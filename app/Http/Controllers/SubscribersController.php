@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Advert;
-use App\Models\Event;
+use App\Models\subscribers;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class AdvertController extends Controller
+class SubscribersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,17 +16,15 @@ class AdvertController extends Controller
     public function index(Request $request)
     {
 
-        if ($request->hasFile('poster')) {
-            $file = $request->file('poster');
-            $fileName = $file->getClientOriginalName();
-            $file->move(public_path('Adverts'), $fileName);// Store in 'storage/app/uploads' directory
+//        Subscribers::create(['email'=>$request->email]);
 
-            Advert::create(['title' => $request->title, 'link' => $request->link, 'poster' => $fileName]);
+        $subscriber = subscribers::updateOrCreate(['email'=>$request->email]);
+        $subscriber->email = $request->email;
+        $subscriber->save();
 
-            Alert::success('Success', ' Event Uploaded Successful');
+        Alert::success('Success',   'Upploaded succesful');
+        return redirect()->back();
 
-            return redirect()->back();
-        }
     }
 
     /**
@@ -54,10 +51,10 @@ class AdvertController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Advert  $advert
+     * @param  \App\Models\subscribers  $subscribers
      * @return \Illuminate\Http\Response
      */
-    public function show(Advert $advert)
+    public function show(subscribers $subscribers)
     {
         //
     }
@@ -65,10 +62,10 @@ class AdvertController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Advert  $advert
+     * @param  \App\Models\subscribers  $subscribers
      * @return \Illuminate\Http\Response
      */
-    public function edit(Advert $advert)
+    public function edit(subscribers $subscribers)
     {
         //
     }
@@ -77,10 +74,10 @@ class AdvertController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Advert  $advert
+     * @param  \App\Models\subscribers  $subscribers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Advert $advert)
+    public function update(Request $request, subscribers $subscribers)
     {
         //
     }
@@ -88,14 +85,11 @@ class AdvertController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Advert  $advert
+     * @param  \App\Models\subscribers  $subscribers
      * @return \Illuminate\Http\Response
      */
-    public function delete($id)
+    public function destroy(subscribers $subscribers)
     {
-        Advert::destroy($id);
-
-        Alert::success('Success', ' Event deleted');
-        return redirect()->back();
+        //
     }
 }

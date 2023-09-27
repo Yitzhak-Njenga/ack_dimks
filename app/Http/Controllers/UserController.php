@@ -26,6 +26,8 @@ class UserController extends Controller
         }
         else{
             Alert::success('Success', ' You have login Successful');
+            Alert::alert('Title', 'Message', 'Type');
+
             $request->session()->put('user',$user);
             return redirect('/dashboard');
         }

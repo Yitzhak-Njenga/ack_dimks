@@ -21,20 +21,19 @@
                 @endforeach
             </div>
         </div>
-        <div class="col-lg-5 px-0">
+        <div class="col-lg-5 px-0" >
             <div class="row mx-0">
                 @foreach($News as $news)
                 <div class="col-md-6 px-0">
 
                     <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-00"src="NewsImages/{{$news->img_2}}" style="object-fit: cover;">
+                        <img class="img-fluid w-100 h-00"src="NewsImages/{{$news->img_2}}" style="object-fit: cover;height: 250px">
                         <div class="overlay">
                             <div class="mb-2">
-                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                   href="">Read more</a>
-                                <a class="text-white" href=""><small>Jun 15, 2023</small></a>
+
+                                <a class="h6 text-white" href="/{{$news['id']}}">{{$news->title}}</a>
+                                <small><a class="text-white" href=""><small>{{$news->created_at->todatestring()}}</small></a></small>
                             </div>
-                            <a class="h6 m-0 text-white " href="read/news/{id}">{{$news->tilte}}</a>
                         </div>
                     </div>
 
@@ -54,12 +53,12 @@
         <div class="row align-items-center bg-dark">
             <div class="col-12">
                 <div class="d-flex justify-content-between">
-                    <div class="bg-primary text-dark text-center font-weight-medium py-2" style="width: 170px;">
+                    <div class="bg-primary text-dark font-weight-medium p-2 py-2" style="width: 150px;">
                         Latest News</div>
-                    <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
-                         style="width: calc(100% - 170px); padding-right: 90px;">
+                    <div class="owl-carousel tranding-carousel position-relative d-inline-flex"
+                         style="width: calc(100% - 170px); padding-right: 10px;">
                         @foreach($News as $news)
-                        <div class="text-truncate"><a class="text-white text-capitalize"
+                        <div class="text-truncate"><a class="text-white"
                                                       href="">{{$news->title}}</a></div>
                         @endforeach
 
@@ -96,7 +95,7 @@
     </div>
 
     <div class="col-12">
-        <a class="text-black-50 table-hover" href="/meet_bishop"><button class="btn btn-primary m-5"> Meet Bishop</button></a>
+        <a class="text-black-50 table-hover" href=""><button class="btn btn-primary m-5"> Meet Bishop</button></a>
     </div>
 
 </div>
@@ -156,30 +155,31 @@
                                             <i class="fab fa-twitter text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
                                             <span class="font-weight-medium">13,345 Followers</span>
                                         </a>
-                                        <a href="https://www.instagram.com/tai_world_wide_ministry/" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
+                                        <a href="https://www.instagram.com/tai_world_wide_ministry/" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
                                             <i class="fab fa-instagram text-center py-4 mr-3" style="width: 65px; background: rgb(255,0,166);"></i>
                                             <span class="font-weight-medium">111 Followers</span>
                                         </a>
-                                        <a href="https://www.youtube.com/@taiworldwideministry" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
+                                        <a href="https://www.youtube.com/@taiworldwideministry" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
                                             <i class="fab fa-youtube text-center py-4 mr-3" style="width: 65px; background: rgba(255,5,5,0.92);"></i>
-                                            <span class="font-weight-medium">111 Followers</span>
+                                            <span class="font-weight-medium">3,800 Followers</span>
                                         </a>
                                     </div>
                                     <!-- Social Follow End -->
 
-
-                                </div>
-
-                                <!-- Social Follow End -->
-
-                                <!-- Ads Start -->
+                                                <!-- Ads Start -->
                                 <div class="mb-3">
                                     <div class="section-title mb-0">
                                         <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
                                     </div>
                                     <div class="bg-white text-center border border-top-0 p-3">
-                                        {{--                            <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>--}}
+                                        @if($adverts->isNotEmpty())
+                                            @foreach($adverts as $advert)
+                                             <a href="{{$advert->link}}"><img class="img-fluid" src="Adverts/{{$advert->poster}}" alt=""></a>
+                                            <h6><a href="{{$advert->link}}" >{{$advert->title}}</a></h6>
+                                            @endforeach
+                                        @else
                                         No adverts at the moment
+                                        @endif
                                     </div>
                                 </div>
                                 <!-- Ads End -->
@@ -191,13 +191,19 @@
                                         <h4 class="m-0 text-uppercase font-weight-bold">Newsletter</h4>
                                     </div>
                                     <div class="bg-white text-center border border-top-0 p-3">
-                                        <div class="input-group mb-2" style="width: 100%;">
-                                            <input type="text" class="form-control form-control-lg" placeholder="Your Email">
+                                        <div class="input-group" style="width: 100%;">
+                                            <div class="row">
+                                            <form method="post" class="col-12"  enctype="multipart/form-data" action="/subcribers">
+                                                @csrf
+                                            <input type="email" required name="email" class="form-control col-12" placeholder="Your Email">
                                             <div class="input-group-append">
-                                                <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                                                <button type="submit" class="m-3 btn btn-primary font-weight-bold px-3">Sign Up</button>
+                                            </div>
+                                                <small>Subscribe to our News Letter</small>
+                                            </form>
                                             </div>
                                         </div>
-{{--                                        <small></small>--}}
+
                                     </div>
                                 </div>
 
@@ -246,6 +252,8 @@
 
         </div>
 </div>
+</div>
+
 @endsection
 
 

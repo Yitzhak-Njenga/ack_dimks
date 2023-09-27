@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Login Page | CodingNepal</title>
-    <link rel="stylesheet" href="css/login.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ANGLICAN CHURCH OF KENYA" name="keywords">
+    <meta content="Diocese Of Mount Kenya South" name="descripti1on">    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <nav>
@@ -34,7 +35,8 @@
     </form>
 
 </div>
-@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+
+@include('sweetalert::alert')
 </body>
 <script>
     function myFunction() {

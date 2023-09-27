@@ -35,7 +35,7 @@
                                 <img  src="./img/The-Rt.-Rev.-George-M.-Njuguna-3rd-Bishop-of-the-Diocese-of-Mount-Kenya-South.jpg"  >
                                 <div class="card-body">
                                     <h5 class="card-title">The Rt. Rev. George M. Njuguna - 3rd Bishop of the Diocese of Mount Kenya South</h5>
-                                    <button  class="btn btn-primary">iuiuhih</button>
+{{--                                    <button  class="btn btn-primary">iuiuhih</button>--}}
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                                 <img  src="./img/The-Rt.-Rev.-Charles-M.-Muturi-web.jpg"  >
                                 <div class="card-body">
                                     <h5 class="card-title">The Rt. Rev. Charles M. Muturi - 6th Bishop of the Diocese of Mount Kenya South</h5>
-{{--                                    <button  class="btn btn-primary">Current Bishop</button>--}}
+                                    <button  class="btn btn-primary">Current Bishop</button>
                                 </div>
                             </div>
                         </div>
