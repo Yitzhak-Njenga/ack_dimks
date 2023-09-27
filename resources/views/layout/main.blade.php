@@ -48,6 +48,16 @@
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-66ZSLNRVMK"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-66ZSLNRVMK');
+</script>
+
 <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
     window.onscroll = function() {myFunction()};
